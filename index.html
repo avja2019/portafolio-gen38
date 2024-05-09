@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Taller</title>
+    <link rel='stylesheet' href='assets/css/style.css'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav container">
+        <a href="/" class="logo">
+          <i class='bx bxl-xing'></i>
+          <span>logo</span>
+        </a>
+
+        <div id="menu" class="menu clase2 clase3">
+          <button type="button" id="btnClose" class="btn btn-close" aria-label="cerrar">
+            <i class='bx bx-x'></i>
+          </button>
+
+          <ul class='menu__list'>
+            <li class='menu__item'>
+              <a href='#' class='menu__link'>Inicio</a>
+            </li>
+            <li class='menu__item'>
+              <a href='#' class='menu__link'>Acerca de Mí</a>
+            </li>
+            <li class='menu__item'>
+              <a href='#' class='menu__link'>Habilidades</a>
+            </li>
+            <li class='menu__item'>
+              <a href='#' class='menu__link'>Proyectos</a>
+            </li>
+            <li class='menu__item'>
+              <a href='#' class='menu__link'>Contacto</a>
+            </li>
+          </ul>
+
+          <a href='#' class="btn btn-resume">
+            Descargar C.V.
+          </a>
+        </div>
+
+        <button type="button" id="btnOpen" class="btn btn-open" aria-label="abrir">
+          <i class='bx bx-menu'></i>
+        </button>
+      </nav>
+    </header>
+
+    <script>
+
+
+      // getElementById - busca un elemento por su id
+      const menu = document.getElementById('menu')
+      const btnOpen = document.getElementById('btnOpen')
+      const btnClose = document.getElementById('btnClose')
+
+      function openMenu () {
+        menu.classList.add('show-menu')
+      }
+
+      function closeMenu () {
+        menu.classList.remove('show-menu')
+      }
+
+      // esta bien
+      btnOpen.onclick = openMenu
+      btnClose.onclick = closeMenu
+
+      // esta mal
+      // btnOpen.onclick = openMenu()
+
+      // console.log(menu)
+      // console.log(menu.classList)
+      // console.log(menu.classList.add('clase4'))
+      // console.log(menu.classList.remove('clase2'))
+    </script>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </body>
+</html>
