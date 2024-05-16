@@ -1,7 +1,18 @@
+:root {
+  --header-height: 60px;
+  --bg-body: #fff;
+  --txt-body: #000;
+  --bg-nav: #fff;
+  --color-primary:rgb(12, 100, 207);
+  --btn-color: #000;
+}
+
+
 html {
   /* root */
   font-size: 16px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -11,12 +22,27 @@ html {
 }
 
 body {
+  background-color: var(--bg-body);
+  color: var(--txt-body);
   font-family: sans-serif;
   margin: 0;
   font-size: 1rem;
 }
 
+body.dark{
+  --bg-body: #000;
+  --txt-body: #fff;
+  --bg-nav: #111;
+  --btn-color: #fff;
+}
+
 /* Utilities */
+
+.section {
+  padding: 45px 0 20px ;
+
+}
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
@@ -24,7 +50,7 @@ body {
 }
 
 .btn {
-  background-color: #fff;
+  color: var(--btn-color);
   border: none;
   padding: .75em 1.2em;
   cursor: pointer;
@@ -34,24 +60,30 @@ body {
   margin-top: 100px;
 }
 
+.main {
+  margin-top: var(--header-height);
+}
 /* Header */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  background-color: var(--bg-nav);
   box-shadow: 0 0 25px #00000036;
 }
 
+
+
 .nav {
-  height: 60px;
+  height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  color: #000;
+  color: var(--txt-body);
   font-size: 24px;
   font-weight: 700;
   text-decoration: none;
@@ -60,7 +92,7 @@ body {
 }
 
 .logo i {
-  color: rgb(32, 178, 170);
+  color: var(--color-primary, #000);
   font-size: 38px;
 }
 
@@ -89,6 +121,10 @@ body {
   color: rgb(32, 178, 170);
 }
 
+.menu__link.active {
+  color: rgb(32, 178, 170);
+}
+
 .btn-resume {
   background-color: rgb(32, 178, 170);
   border: 2px solid transparent;
@@ -108,7 +144,7 @@ body {
 @media (max-width: 900px) {
   .menu {
     text-align: center;
-    background-color: rgb(32, 178, 170);
+    background-color: var(--color-primary);
     flex-direction: column;
     justify-content: space-evenly;
     position: fixed;
@@ -138,6 +174,10 @@ body {
 
   .menu__link:hover {
     color: #fff;
+  }
+
+  .menu__link.active {
+    color: rgb(56, 137, 235);
   }
 
   .btn-resume {
@@ -195,15 +235,116 @@ body {
   background-color: #1b8a83;
 }
 
+.btns{
+ display: flex;
+ gap: 20px
+}
+
 .btn-open {
   background-color: transparent;
   font-size: 28px;
-  padding: .5em;
+  padding: 0;
+}
+
+.btn-theme {
+  background-color: transparent;
+  font-size: 22px;
+  padding: 0;
+}
+
+.hero {
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  justify-content:  center;
+  align-items: center;
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.hero__name {
+  font-size: 2.4rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.hero__animation {
+  transform-origin: 70%  70%;
+  display: inline-block;
+  animation: saludo-animacion 2.5s infinite;
+  
+}
+
+@keyframes saludo-animacion {
+  0% {
+    transform: rotate(0deg);
+  }   
+
+  10%{
+    transform: rotate(14deg);
+  }
+
+  20%{
+    transform: rotate(-8deg);
+  }
+  
+  30%{
+    transform: rotate(14deg);
+  }
+
+  40%{
+    transform: rotate(-4deg);
+  }
+
+  50%{
+    transform: rotate(10deg);
+  }
+  60%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.hero__description {
+  font-size: 1.5rem;
+  padding: .5em 1em;
+  background-color: var(--color-primary);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.social {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social__link {
+  color: var(--color-text)
+}
+
+.social__link i {
+  font-size: 24px;
+  transition: color .5s;
+}
+
+.social__link i:hover {
+  color: var(--color-primary)
 }
 
 @media (min-width: 900px) {
-  .nav {
-    height: 90px;
+  :root {
+    --header-height: 90px;
   }
 
   .btn-close {
@@ -214,6 +355,14 @@ body {
   .btn-open {
     visibility: hidden;
   }
+}
+
+.box {
+  border: 1px solid #000;
+  width: 100%;
+  height: 200px;
+  margin-top:100px;
+
 }
 
 /* Unidades de Medida */
@@ -273,4 +422,3 @@ body {
   .header {
     background-color: lightblue;
   }
-} */

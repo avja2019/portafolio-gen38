@@ -7,7 +7,7 @@
     <link rel='stylesheet' href='assets/css/style.css'>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
-  <body>
+  <body class="dark">
     <!-- Header -->
     <header class="header">
       <nav class="nav container">
@@ -23,19 +23,19 @@
 
           <ul class='menu__list'>
             <li class='menu__item'>
-              <a href='#' class='menu__link'>Inicio</a>
+              <a href='#hero' class='menu__link active'>Inicio</a>
             </li>
             <li class='menu__item'>
-              <a href='#' class='menu__link'>Acerca de Mí</a>
+              <a href='#about' class='menu__link'>Acerca de Mí</a>
             </li>
             <li class='menu__item'>
-              <a href='#' class='menu__link'>Habilidades</a>
+              <a href='#skills' class='menu__link'>Habilidades</a>
             </li>
             <li class='menu__item'>
-              <a href='#' class='menu__link'>Proyectos</a>
+              <a href='#projects' class='menu__link'>Proyectos</a>
             </li>
             <li class='menu__item'>
-              <a href='#' class='menu__link'>Contacto</a>
+              <a href='#contact' class='menu__link'>Contacto</a>
             </li>
           </ul>
 
@@ -43,41 +43,78 @@
             Descargar C.V.
           </a>
         </div>
-
+        
+        <div class="btns">
         <button type="button" id="btnOpen" class="btn btn-open" aria-label="abrir">
           <i class='bx bx-menu'></i>
         </button>
+
+        <button type="button" id="btnTheme" class="btn btn-theme" aria-label="theme">
+          <i class='bx bxs-moon' ></i>
+        </button>
+      </div>
+        
+
       </nav>
     </header>
+    
+    <main class="main">
+      <section id="hero" class="section hero">
+        <div class="container">
+          <h1>Hola, <span class="hero__animation">👋</span> soy 
+            <br> <span class="hero__name">Jhon Alanya</span></h1>
+          <p  class="hero__description">
+            <span id="typing"></span>
+          </p>
 
-    <script>
+          <ul class="social"> 
+            <li class="social_item">
+              <a href="#" class="social__link" aria-label="linkedin">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+            </li>
+            <li class="social_item">
+              <a href="#" class="social__link" aria-label="github">
+                <i class="bx bxl-github"></i>
+              </a>
+            </li>
+            <li class="social_item">
+              <a href="#" class="social__link" aria-label="twitter">
+                <i class="bx bxl-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
 
+      </section>
+      <section id="about" class="section about">
+        <div class="container">
+          <h2 class="section section__title">Acerca de mi</h2>
+        </div>
 
-      // getElementById - busca un elemento por su id
-      const menu = document.getElementById('menu')
-      const btnOpen = document.getElementById('btnOpen')
-      const btnClose = document.getElementById('btnClose')
+      </section>
+      <section id="skills" class="section skills">
+        <div class="container">
+          <h2 class="section section__title">Habilidades</h2>
+        </div>
 
-      function openMenu () {
-        menu.classList.add('show-menu')
-      }
+      </section>
+      <section id="projects"  class="section projects">
+        <div class="container">
+          <h2 class="section section__title">Proyectos</h2>
+        </div>
 
-      function closeMenu () {
-        menu.classList.remove('show-menu')
-      }
+      </section>
+      <section id="contact" class="section contact">
+        <div class="container">
+          <h2 class="section section__title">Contatos</h2>
+        </div>
 
-      // esta bien
-      btnOpen.onclick = openMenu
-      btnClose.onclick = closeMenu
+      </section>
+    </main>
 
-      // esta mal
-      // btnOpen.onclick = openMenu()
-
-      // console.log(menu)
-      // console.log(menu.classList)
-      // console.log(menu.classList.add('clase4'))
-      // console.log(menu.classList.remove('clase2'))
-    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="assets/js/index.js"></script>
 
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
