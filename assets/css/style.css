@@ -3,7 +3,7 @@
   --bg-body: #fff;
   --txt-body: #000;
   --bg-nav: #fff;
-  --color-primary: #fe7777;
+  --color-primary: #0a66c2; /*#0a66c2*/
   --btn-color: #000;
 }
 
@@ -12,7 +12,7 @@ body.dark {
   --txt-body: #f0f0f0;
   --bg-nav: #111;
   --btn-color: #fff;
-  --color-primary: #fe7777;
+  --color-primary: #0a66c2;
 }
 
 html {
@@ -271,7 +271,7 @@ img {
 
 /* Hero */
 .hero {
-  background: linear-gradient(0deg, #0000009e, #000000c4 60%), url('../img/bg.jpg');
+  background: linear-gradient(0deg, #0000009e, #000000c4 60%), url('../img/p3.jpg');
   background-size: cover;
   /* cover | contain */
   background-repeat: no-repeat;
