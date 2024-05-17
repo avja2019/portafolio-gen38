@@ -41,7 +41,7 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 
 1. **Clona el repositorio:** Ejecuta el siguiente comando en tu terminal para clonar este repositorio en tu máquina local:
     ```sh
-    git clone https://github.com/EZT3BAN/portafolio.git
+    git clone https://github.com/avja2019/portafolio-gen38.git
     ```
 
 2. **Abre el proyecto:** Navega hasta la carpeta del proyecto clonado y abre el archivo `index.html` en tu navegador web.
